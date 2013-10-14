@@ -92,10 +92,21 @@ PRODUCT_PACKAGES += \
     linville.key.pub.pem \
     regulatory.bin
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    wlan.driver.ath=0
+
+# Hostapd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/rootdir/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/rootdir/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
+    $(LOCAL_PATH)/rootdir/etc/hostapd/hostapd.conf:system/etc/hostapd/hostapd.conf
+
 # Qcom SoftAP
 PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libqsap_sdk
+
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
