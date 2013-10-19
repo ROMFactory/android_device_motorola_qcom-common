@@ -99,7 +99,6 @@ TARGET_QCOM_DISPLAY_VARIANT ?= caf
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 # Use retire fence from MDP driver
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 
@@ -125,7 +124,7 @@ TARGET_PROVIDES_CAMERA_HAL := true
 COMMON_GLOBAL_CFLAGS += -DCAMERA_POWERMODE
 
 # Power
-TARGET_PROVIDES_POWERHAL := true
+TARGET_USES_CM_POWERHAL := true
 
 # Number of supplementary service groups allowed by init
 TARGET_NR_SVC_SUPP_GIDS := 28
