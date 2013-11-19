@@ -7,3 +7,5 @@ allow ueventd persist_wifi_file:file { read getattr open };
 allow ueventd sysfs:file relabelfrom;
 allow ueventd sysfs_writable:file { getattr setattr };
 allow ueventd cgroup:dir { create add_name };
+allow ueventd sdcard_external:dir search;	1
+allow ueventd sdcard_external:file r_file_perms; 
