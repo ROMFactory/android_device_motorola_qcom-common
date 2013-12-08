@@ -260,10 +260,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
-# World APN list
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/apns-conf.xml:system/etc/apns-conf.xml
-
 # Launcher3
 PRODUCT_PACKAGES += \
     Launcher3
