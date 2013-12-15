@@ -261,11 +261,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
-<<<<<<< HEAD
 # Launcher3
 PRODUCT_PACKAGES += \
     Launcher3
 
-=======
->>>>>>> cm/cm-11.0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
