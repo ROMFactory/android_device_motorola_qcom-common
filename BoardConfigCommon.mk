@@ -23,23 +23,16 @@
 
 LOCAL_PATH := device/motorola/qcom-common
 
-BOARD_VENDOR := motorola-msm8960
-
-TARGET_INIT_VENDOR_LIB := libinit_msm
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8960
+BOARD_VENDOR := motorola-qcom
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
+# Platform
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
-TARGET_CPU_VARIANT := krait
 TARGET_CPU_SMP := true
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
@@ -101,6 +94,7 @@ TARGET_USES_ION := true
 # Use retire fence from MDP driver
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_QCOM_BSP := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
