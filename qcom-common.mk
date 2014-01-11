@@ -236,8 +236,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qc.sub.rdump.max=20
 
 # Radio and Telephony
+ifneq ($(TARGET_BOARD_PLATFORM),msm8226)
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libril-qc-qmi-1.so \
+    rild.libpath=/system/lib/libril-qc-qmi-1.so
+endif
+PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     keyguard.no_require_sim=true \
     ro.use_data_netmgrd=true \
@@ -246,6 +249,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.call_type=1 \
     ro.config.vc_call_vol_steps=7 \
     ro.modem.no_wdog_chk=1
+
+PRODUCT_GMS_CLIENTID_BASE ?= android-motorola
 
 # QC time services
 PRODUCT_PROPERTY_OVERRIDES += \
