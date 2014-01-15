@@ -193,8 +193,10 @@ PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_nv.bin
 
 # QC Perf
+ifneq ($(TARGET_BOARD_PLATFORM),msm8226)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
+endif
 
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -205,7 +207,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=endfire \
     persist.audio.vr.enable=false \
     persist.audio.handset.mic=digital \
-    ro.qc.sdk.audio.fluencetype=fluence \
     ro.qc.sdk.audio.ssr=false
 
 # Bluetooth
