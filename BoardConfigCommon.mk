@@ -115,7 +115,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 
 # Power
-TARGET_PROVIDES_POWERHAL := true
+TARGET_USES_CM_POWERHAL := true
 
 # Number of supplementary service groups allowed by init
 TARGET_NR_SVC_SUPP_GIDS := 28

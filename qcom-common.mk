@@ -192,10 +192,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     WCNSS_qcom_wlan_nv.bin
 
-# Emoji
-PRODUCT_PACKAGES += \
-    libemoji
-
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
@@ -255,9 +251,5 @@ PRODUCT_GMS_CLIENTID_BASE ?= android-motorola
 # QC time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
-
-# Launcher3
-PRODUCT_PACKAGES += \
-    Launcher3
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
